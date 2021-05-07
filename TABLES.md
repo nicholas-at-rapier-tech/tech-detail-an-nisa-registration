@@ -2,7 +2,7 @@
 
 
 ## Table :: users
-> - id              (user_id)
+> - id (user_id)
 > - username
 > - email
 > - role
@@ -13,11 +13,13 @@
 
 
 ## Table :: patients
-> - id              (patient_id)
+> - id (patient_id)
 > - user_id
 > - fullname
+> - gender
 > - nik
 > - bpjs_id
+> - insurance_code
 > - insurance_id
 > - date_ob
 > - place_ob
@@ -26,9 +28,7 @@
 > - update_at
 > - update_by
 
-
-
-## Table :: medical_records
+## Table :: patient_medical_records
 > - id
 > - medical_record_id
 > - patient_id
@@ -38,11 +38,113 @@
 > - update_by
 
 
-## Table :: bpjs_vclaim
+## Table :: patient_bpjs_vclaim
 > - id
 > - patient_id
 > - claim_date
 > - sep_number
+> - description
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+## Table :: patient_registration
+> - id (registration_id)
+> - registration_date
+> - patient_id
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+## Table :: patient_schedule_booked
+> - id (booking_id)
+> - booking_date
+> - registration_id
+> - schedule_id
+> - description
+> - status
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+## Table :: schedule_quota
+> - id (quota_id)
+> - schedule_id
+> - booking_id
+> - patient_id
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+
+## Table :: schedule_doctor
+> - id (schedule_id)
+> - poli_code
+> - doctor_id
+> - day
+> - time
+> - quota
+> - status
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+## Table :: ms_hospital
+> - code (hospital_code)
+> - name
+> - address
+> - postal_code
+> - remark
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+|code|name|address|phone|email|remark|
+|:---|:---|:---|:---|:---|
+|RS001|Rumah Sakit An Nisa|Jl. Gatot Subroto Km.3 No.96 Cibodas Kota Tangerang - Banten|(021) 552 5564|marketing@rsannisa.co.id|remark|
+
+## Table :: ms_policlinic
+> - code (poli_Code)
+> - hospital_code
+> - name
+> - remark
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+|code|hospital_code|name|
+|:---|:---|:---|
+|PK001|RS001|Poliklinik Mata|
+|PK002|RS001|Poliklinik Bedah|
+|PK003|RS001|Poliklinik Anak|
+
+## Table :: ms_doctor
+> - id (doctor_id)
+> - fullname
+> - gender
+> - place
+> - university
+> - qualified
+> - idi_number
+> - str_number
+> - sip_number
+> - archive_number
+> - establish_date
+> - expired_date
+> - region
+> - status
+> - remark
+> - create_at
+> - create_by
+> - update_at
+> - update_by
 
 
 
