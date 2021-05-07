@@ -39,7 +39,7 @@
 
 
 ## Table :: patient_bpjs_vclaim
-> - id
+> - id (vclaim_id)
 > - patient_id
 > - claim_date
 > - sep_number
@@ -106,7 +106,7 @@
 > - update_by
 
 |code|name|address|phone|email|remark|
-|:---|:---|:---|:---|:---|
+|:---|:---|:---|:---|:---|:---|
 |RS001|Rumah Sakit An Nisa|Jl. Gatot Subroto Km.3 No.96 Cibodas Kota Tangerang - Banten|(021) 552 5564|marketing@rsannisa.co.id|remark|
 
 ## Table :: ms_policlinic
