@@ -4,7 +4,9 @@
 ## Table :: users
 > - id (user_id)
 > - username
+> - password
 > - email
+> - phone_number
 > - role
 > - create_at
 > - create_by
@@ -17,6 +19,7 @@
 > - user_id
 > - fullname
 > - gender
+> - phone_number
 > - nik
 > - bpjs_id
 > - insurance_code
@@ -43,6 +46,10 @@
 > - patient_id
 > - claim_date
 > - sep_number
+> - sep_date
+> - sep_validity
+> - recommend_number
+> - recommend_policlinic (poli_id)
 > - description
 > - create_at
 > - create_by
@@ -75,6 +82,7 @@
 > - schedule_id
 > - booking_id
 > - patient_id
+> - quota_date
 > - create_at
 > - create_by
 > - update_at
