@@ -22,7 +22,7 @@
 > - api/registration/add/medical_record/{nik}{phone_number}{medical_record_id}
 > - api/registration/add/medical_record/import_form_patient_medial_record
 > - api/registration/list
-> - api/registration/list/by/{token_session}
+> - api/registration/history/by/{token_session}
 > - api/registration/edit/{reg_id}
 > - api/registration/cancel/{reg_id}
 > - api/registration/view/{reg_id}
