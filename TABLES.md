@@ -91,6 +91,7 @@
 
 ## Table :: schedule_doctor
 > - id (schedule_id)
+> - hospital_code
 > - poli_code
 > - doctor_id
 > - day
@@ -119,7 +120,6 @@
 
 ## Table :: ms_policlinic
 > - code (poli_Code)
-> - hospital_code
 > - name
 > - remark
 > - create_at
@@ -127,11 +127,14 @@
 > - update_at
 > - update_by
 
-|code|hospital_code|name|
-|:---|:---|:---|
-|PK001|RS001|Poliklinik Mata|
-|PK002|RS001|Poliklinik Bedah|
-|PK003|RS001|Poliklinik Anak|
+|code|name|
+|:---|:---|
+|PK000|Poliklinik Mata|
+|PK001|Poliklinik Bedah|
+|PK002|Poliklinik Anak|
+|PK003|Poliklinik Umum|
+|PK004|Poliklinik Gigi|
+|PK005|Poliklinik Tulang|
 
 ## Table :: ms_doctor
 > - id (doctor_id)
