@@ -218,7 +218,14 @@
 > - update_at
 > - update_by
 
-
+## Table :: ms_diagnosa
+> - code
+> - name
+> - remark
+> - create_at
+> - create_by
+> - update_at
+> - update_by
 
 ## Table :: ms_insurance
 > - code
