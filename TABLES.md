@@ -43,6 +43,9 @@
 > - sub_district
 > - rt
 > - rw
+> - spouse_name
+> - father_name
+> - mother_name
 > - guarantor_name
 > - guarantor_connection
 > - first_visit
@@ -112,7 +115,7 @@
 ## Table :: schedule_doctor
 > - id (schedule_id)
 > - hospital_code
-> - poli_code
+> - poli_room_code
 > - doctor_id
 > - day
 > - time
@@ -138,8 +141,8 @@
 |:---|:---|:---|:---|:---|:---|
 |RS001|Rumah Sakit An Nisa|Jl. Gatot Subroto Km.3 No.96 Cibodas Kota Tangerang - Banten|(021) 552 5564|marketing@rsannisa.co.id|remark|
 
-## Table :: ms_policlinic
-> - code (poli_Code)
+## Table :: ms_specialist
+> - code (spec_Code)
 > - name
 > - remark
 > - create_at
@@ -149,15 +152,53 @@
 
 |code|name|
 |:---|:---|
-|PK000|Poliklinik Mata|
-|PK001|Poliklinik Bedah|
-|PK002|Poliklinik Anak|
-|PK003|Poliklinik Umum|
-|PK004|Poliklinik Gigi|
-|PK005|Poliklinik Tulang|
+|SP001|Mata|
+|SP002|Bedah|
+|SP003|Anak|
+|SP004|Umum|
+|SP005|Gigi|
+|SP006|Tulang|
+
+
+## Table :: ms_policlinic
+> - code (poli_room_code)
+> - place
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+|code|name|
+|:---|:---|
+|PK001|Lantai 1|
+|PK002|Lantai 1|
+|PK003|Lantai 2|
+|PK004|Lantai 2|
+|PK005|Lantai 2|
+|PK006|Lantai 2|
+
+## Table :: ms_policlinic_specialist
+> - id (PK)
+> - poli_room_code (policlinic)(UNIQUE)
+> - spec_code (specialist)(UNIQUE)
+> - remark
+> - create_at
+> - create_by
+> - update_at
+> - update_by
+
+|id|code|specialist|
+|:---|:---|:---|
+|1|PK000|SP001|
+|2|PK000|SP002|
+|3|PK002|SP003|
+|4|PK003|SP004|
+|5|PK004|SP004|
+|6|PK005|SP005|
 
 ## Table :: ms_doctor
 > - id (doctor_id)
+> - spec_code (specialist)
 > - fullname
 > - gender
 > - place
