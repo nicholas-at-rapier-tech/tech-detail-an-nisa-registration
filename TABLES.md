@@ -23,12 +23,13 @@
 > - religion
 > - education (optional)
 > - occupation
-> - company
+> - occupation_company
 > - nip
 > - npwp
 > - phone_number
 > - nik
 > - bpjs_id
+> - bpjs_company
 > - jkn_number
 > - insurance_code
 > - insurance_number
@@ -36,6 +37,7 @@
 > - place_ob
 > - address_ktp
 > - adresss_now
+> - ethnic
 > - country
 > - province
 > - city
@@ -49,6 +51,12 @@
 > - guarantor_name
 > - guarantor_connection
 > - first_visit
+> - sc_whatsapp
+> - sc_email
+> - sc_instagram
+> - sc_facebook
+> - sc_twitter
+> - sc_pinterest
 > - create_at
 > - create_by
 > - update_at
@@ -189,8 +197,8 @@
 
 |id|code|specialist|
 |:---|:---|:---|
-|1|PK000|SP001|
-|2|PK000|SP002|
+|1|PK001|SP001|
+|2|PK001|SP002|
 |3|PK002|SP003|
 |4|PK003|SP004|
 |5|PK004|SP004|
